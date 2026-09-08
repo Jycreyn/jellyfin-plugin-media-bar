@@ -38,7 +38,20 @@ namespace Jellyfin.Plugin.MediaBar.Configuration
         public bool UseAvatarsFile { get; set; } = true;
 
         public string AvatarsPlaylist { get; set; } = string.Empty;
-        
+
+        // Recommendation engine settings
+        public bool RecommendationsEnabled { get; set; } = false;
+
+        public int RecommendationTopN { get; set; } = 15;
+
+        public double RecommendationRatingWeight { get; set; } = 0.3;
+
+        public double RecommendationGenreWeight { get; set; } = 0.6;
+
+        public double RecommendationRecencyWeight { get; set; } = 0.1;
+
+        public int RecommendationRecencyDays { get; set; } = 90;
+
         public WebConfig WebConfig { get; set; } = new WebConfig();
     }
 
